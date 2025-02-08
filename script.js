@@ -1,6 +1,6 @@
 //your JS code here. If required.
 function manipulateArray() {
-    const outputDiv = document.getElementById("output");
+    const output = document.getElementById("output");
 
     // Initial Promise resolves with array [1, 2, 3, 4] after 3 seconds
     new Promise((resolve) => {
@@ -11,7 +11,7 @@ function manipulateArray() {
         return new Promise((resolve) => {
             setTimeout(() => {
                 const evens = numbers.filter(num => num % 2 === 0);
-                outputDiv.textContent = evens.join(",");
+                output.textContent = evens.join(",");
                 resolve(evens);
             }, 1000);
         });
@@ -21,7 +21,7 @@ function manipulateArray() {
         return new Promise((resolve) => {
             setTimeout(() => {
                 const doubled = evens.map(num => num * 2);
-                outputDiv.textContent = doubled.join(",");
+                output.textContent = doubled.join(",");
                 resolve(doubled);
             }, 2000);
         });
